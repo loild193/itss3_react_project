@@ -1,12 +1,12 @@
 import './styles/main.css';
 
 /* コンポーネント */
-import Todo from './components/Todo';
+import Student from './components/Student';
 
 function App() {
   return (
     <div className="container is-fluid">
-      <Todo />
+      <Student />
     </div>
   );
 }

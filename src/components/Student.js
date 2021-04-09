@@ -11,7 +11,7 @@ import useStorage from '../hooks/storage';
 /* ライブラリ */
 import {getKey} from "../lib/util";
 
-function Todo() {
+function Student() {
   const [items, putItems, clearItems] = useStorage();
   
   const [filter, setFilter] = React.useState('ALL');
@@ -68,4 +68,4 @@ function Todo() {
   );
 }
 
-export default Todo;
+export default Student;
