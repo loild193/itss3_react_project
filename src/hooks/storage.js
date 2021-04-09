@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const STORAGE_KEY = 'itss-todo';
+const STORAGE_KEY = 'students';
 
 function useStorage() {
   const [items, setItems] = useState([]);

@@ -1,9 +1,9 @@
 function Filter({ value, onChange }) {
 
-  const handleClick = (key, e) => {
-    e.preventDefault();
-    onChange(key);
-  };
+  // const handleClick = (key, e) => {
+  //   e.preventDefault();
+  //   onChange(key);
+  // };
 
   return (
     <div className="panel-tabs">

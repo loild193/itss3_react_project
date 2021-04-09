@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function Input( { onAdd } ) {
-  const [text, setText] = React.useState('');
   const [name, setName] = React.useState('');
   const [grade, setGrade] = React.useState('');
   const [id, setId] = React.useState('');
