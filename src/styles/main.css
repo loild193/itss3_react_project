@@ -1,0 +1,37 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css');
+@import url(https://use.fontawesome.com/releases/v5.6.1/css/all.css);
+
+.container {
+  margin-top: 2rem;
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+#customers td{
+  width: 500px;
+}
+#customers1{
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left:  20px;
+}
+#customers1 td{
+  width: 500px;
+}
+input[type = submit] {
+    background-color: gray;
+    border: 1px solid gray;
+    height: 40px;
+    border-radius: 20px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+    padding-left: 20px;
+    margin-left: 500px;
+ }
+
