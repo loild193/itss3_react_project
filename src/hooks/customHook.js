@@ -43,6 +43,6 @@ export default function useCustomHook() {
     setStudents([]);
     localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
   }
-  
-  return [students, insertNewStudent, editStudent, deleteAllStudents];
+ 
+ return [students, insertNewStudent, editStudent, deleteAllStudents];
 }

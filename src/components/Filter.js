@@ -12,6 +12,7 @@ function Filter({ value, onChange }) {
             <td>ID</td>
             <td>NAME</td>
             <td>GRADE</td>
+            <td>DELETE</td>
           </tr>
         </table>
      
