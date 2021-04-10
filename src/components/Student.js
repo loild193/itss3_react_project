@@ -37,11 +37,13 @@ function Student() {
   const handleAdd = item => {
     putItems([...items, { key: getKey(), item, done: false }]);
   }; 
+  
   const handleDelete = studentId => {
-   console.log(studentId);
-   let newStudents = [...items];
-   newStudents.splice(studentId, 1);
-   putItems(newStudents);
+    alert("Are you sure want to delete?");
+    console.log(studentId);
+    let newStudents = [...items];
+    newStudents.splice(studentId, 1);
+    putItems(newStudents);
   }
   
   

@@ -22,11 +22,9 @@ function TodoItem({ item, index, onCheck, onDelete }) {
             <td>{item.item.id}</td>
             <td>{item.item.name}</td>
             <td>{item.item.grade}</td>
-            <td> 
-          
-          
-            <button onClick={() => onDelete(index)}
-                  className='book-delete'> Delete </button>
+            <td>
+              <i  onClick={() => onDelete(index)}
+                  className='btn btn-danger student-delete far fa-trash-alt'></i>
             </td>
           </tr>
         </table>

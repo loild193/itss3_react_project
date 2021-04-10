@@ -35,3 +35,7 @@ input[type = submit] {
     margin-left: 500px;
  }
 
+i {
+  color: red;
+  margin-left: 30px;
+}
