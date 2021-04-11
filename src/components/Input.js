@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 function Input( { onAdd } ) {
-  const [name, setName] = React.useState('');
-  const [grade, setGrade] = React.useState('');
-  const [id, setId] = React.useState('');
+  const [name, setName] = useState('');
+  const [grade, setGrade] = useState('');
+  const [id, setId] = useState('');
 
   const handleChangeName = e => setName(e.target.value);
-    const handleChangeGrade = e => setGrade(e.target.value);
-    const handleChangeId = e => setId(e.target.value);
+  const handleChangeGrade = e => setGrade(e.target.value);
+  const handleChangeId = e => setId(e.target.value);
   
   const handleKeyDown = e => {
     if (e.keyCode === 13) {

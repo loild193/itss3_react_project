@@ -8,15 +8,11 @@ import Filter from './Filter';
 /* カスタムフック */
 import useStorage from '../hooks/storage';
 
-
-/* ライブラリ */
-import {getKey} from "../lib/util";
-
 function Student() {
-  const [items, putItems, clearItems] = useStorage();
+  const [items, putItems, editItems, clearItems] = useStorage();
   const [students, setStudents] = useState([]);
   
-  const [filter, setFilter] = React.useState('all');
+  const [filter, setFilter] = useState('all');
 
   const displayItems = items.filter(item => {
     if (filter === 'all') return true;
@@ -34,12 +30,12 @@ function Student() {
   };
   
   const handleAdd = item => {
-    putItems([...items, { key: getKey(), item, done: false }]);
+    putItems([...items, { item, done: false }]);
   }; 
   
   const handleDelete = studentId => {
     alert("Are you sure want to delete?");
-    console.log(studentId);
+    
     let newStudents = [...items];
     newStudents.splice(studentId, 1);
     putItems(newStudents);
@@ -47,7 +43,6 @@ function Student() {
   
   
   const handleFilterChange = (value) => {
-    console.log(value);
     setFilter(value);
   }
 

@@ -1,14 +1,7 @@
 import { useState } from 'react';
 
 function Filter({ value, onChange }) {
-
-  // const handleClick = (key, e) => {
-  //   e.preventDefault();
-  //   onChange(key);
-  // };
-  
   const onChangeSelect = (event) => {
-    console.log(event.target.value);
     onChange(event.target.value);
   }
 
