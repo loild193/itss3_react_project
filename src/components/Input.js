@@ -54,7 +54,9 @@ function Input( { onAdd } ) {
      <div className="panel-block">
       <input
         class="input"
-        type="text"
+        type="number"
+        min='1'
+        max='5'
         placeholder="GRADEを入力してください"
         value={grade}
         onChange={handleChangeGrade}
@@ -64,7 +66,7 @@ function Input( { onAdd } ) {
       <div className="panel-block">
       <input
         class="input"
-        type="text"
+        type="number"
         placeholder="idを入力してください"
         value={id}
         onChange={handleChangeId}

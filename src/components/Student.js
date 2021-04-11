@@ -16,12 +16,11 @@ function Student() {
   const [items, putItems, clearItems] = useStorage();
   const [students, setStudents] = useState([]);
   
-  const [filter, setFilter] = React.useState('ALL');
+  const [filter, setFilter] = React.useState('all');
 
   const displayItems = items.filter(item => {
-    if (filter === 'ALL') return true;
-    if (filter === 'TODO') return !item.done;
-    if (filter === 'DONE') return item.done;
+    if (filter === 'all') return true;
+    else return item.item.grade === filter;
   });
   
   const handleCheck = checked => {
@@ -47,7 +46,10 @@ function Student() {
   }
   
   
-  const handleFilterChange = value => setFilter(value);
+  const handleFilterChange = (value) => {
+    console.log(value);
+    setFilter(value);
+  }
 
   return (
     <article className="panel is-danger">
