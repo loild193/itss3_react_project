@@ -1,4 +1,7 @@
+import {useParams} from "react-router-dom";
+
 const Edit = () => {
+    const {studentId} = useParams();
     return (
      <article className="panel is-danger">
           <div className="panel-heading">

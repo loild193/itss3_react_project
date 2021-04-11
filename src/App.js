@@ -11,7 +11,7 @@ function App() {
           <Route exact path="/">
             <Student />
           </Route>
-          <Route path="/edit">
+          <Route path="/edit/:studentId">
             <Edit />
           </Route>
         </Switch>
