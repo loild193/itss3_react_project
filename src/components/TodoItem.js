@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import useStorage from '../hooks/storage';
 function TodoItem({ item, index, onCheck, onDelete }) {
   // const [deleteStudent,deleteAllStudents] = useStorage();
@@ -25,6 +26,10 @@ function TodoItem({ item, index, onCheck, onDelete }) {
             <td>
               <i  onClick={() => onDelete(index)}
                   className='btn btn-danger student-delete far fa-trash-alt'></i>
+              <Link to={`/edit/${index}`}>
+                <i className='btn btn-danger student-delete far fa-edit'></i>
+              </Link>
+              
             </td>
           </tr>
         </table>

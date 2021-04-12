@@ -23,6 +23,7 @@ function Filter({ value, onChange }) {
             </select>
             </td>
             <td>DELETE</td>
+            <td>EDIT</td>
           </tr>
         </table>
      
