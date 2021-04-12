@@ -20,12 +20,14 @@ function Student() {
   });
   
   const handleCheck = checked => {
+    console.log(items)
     const newItems = items.map(item => {
-      if (item.key === checked.key) {
+      if (item.item.id === checked.item.id) {
         item.done = !item.done;
       }
       return item;
     });
+    
     putItems(newItems);
   };
   
@@ -63,7 +65,7 @@ function Student() {
       />
       {displayItems.map((item,index) => (
         <TodoItem 
-          key={item.key}
+          key={item.item.id}
           item={item}
           index={index}
           onCheck={handleCheck}

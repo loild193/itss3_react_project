@@ -26,10 +26,11 @@ function TodoItem({ item, index, onCheck, onDelete }) {
             <td>
               <i  onClick={() => onDelete(index)}
                   className='btn btn-danger student-delete far fa-trash-alt'></i>
+            </td>
+            <td>
               <Link to={`/edit/${index}`}>
                 <i className='btn btn-danger student-delete far fa-edit'></i>
               </Link>
-              
             </td>
           </tr>
         </table>

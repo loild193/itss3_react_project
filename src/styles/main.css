@@ -11,7 +11,9 @@
  
 }
 #customers td{
-  width: 500px;
+  width: 240px;
+  white-space: nowrap;
+  display: inline-block;
 }
 #customers1{
   margin-top: 50px;
@@ -21,7 +23,9 @@
   margin-left:  20px;
 }
 #customers1 td{
-  width: 500px;
+  white-space: nowrap;
+  width: 250px;
+  display: inline-block;
 }
 input[type = submit] {
     background-color: gray;

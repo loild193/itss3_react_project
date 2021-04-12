@@ -23,17 +23,16 @@ export default function useStorage() {
     setItems(items);
   };
   
-  // Edit a student in student list
+  // Edit a student in student lists
   const editItems = newItem => {
-    let indexOfStudent;
-    for (const item of items) {
-      if (item.id === newItem.id)
-        indexOfStudent = items.indexOf(item);
-    }
+    const indexOfStudent = items.findIndex((item) => item.item.id === newItem.id);
     
     const editedItems = [
       ...items.slice(0, indexOfStudent),
-      newItem,
+      {
+        item: newItem,
+        done: false,
+      },
       ...items.slice(indexOfStudent + 1),
     ];
     setItems(editedItems);

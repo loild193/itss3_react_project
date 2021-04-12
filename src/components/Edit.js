@@ -1,17 +1,25 @@
-import {useParams} from "react-router-dom";
-import React, { useState } from 'react';
+import {useParams, useHistory} from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 /* カスタムフック */
 import useStorage from '../hooks/storage';
 const Edit = () => {
-    const [items, putItems, editItems, clearItems] = useStorage();
+    const [items, putItems, editItems] = useStorage();
     //get ID(index) from url
     const {index} = useParams();
+    const history = useHistory();
     //get student by ID(index)
-    const student = items.slice(index, index+1);
-    console.log(student);
-    const [name, setName] = useState(student.name);
-    const [grade, setGrade] = useState(student.grade);
-    const [id, setId] = useState(student.id);
+    
+    const [name, setName] = useState('');
+    const [grade, setGrade] = useState('');
+    const [id, setId] = useState('');
+    
+    useEffect(() => {
+      const student = items[index]?.item;
+
+      setName(student?.name);
+      setGrade(student?.grade);
+      setId(student?.id);
+    }, [items]);
     
     const handleChangeName = e => setName(e.target.value);
     const handleChangeGrade = e => setGrade(e.target.value);
@@ -19,6 +27,7 @@ const Edit = () => {
     
     const handleEdit = item => {
         editItems(item);
+        history.push('/');
     };
     
     const onEdit = () => {
@@ -64,6 +73,7 @@ const Edit = () => {
         </div>
         <div className="panel-block">
           <input
+            disabled={true}
             class="input"
             type="number"
             placeholder="idを入力してください"
