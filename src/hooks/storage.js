@@ -31,11 +31,13 @@ export default function useStorage() {
         indexOfStudent = items.indexOf(item);
     }
     
-    setItems([
+    const editedItems = [
       ...items.slice(0, indexOfStudent),
       newItem,
       ...items.slice(indexOfStudent + 1),
-    ]);
+    ];
+    setItems(editedItems);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(editedItems));
   }
 
   // Delete all students
