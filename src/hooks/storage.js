@@ -28,7 +28,7 @@ export default function useStorage() {
     let indexOfStudent;
     for (const item of items) {
       if (item.id === newItem.id)
-        indexOfStudent = items.indeOf(item);
+        indexOfStudent = items.indexOf(item);
     }
     
     setItems([
